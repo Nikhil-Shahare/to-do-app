@@ -4,9 +4,11 @@ const connectDatabase = require("./db")
 const {PORT}=process.env
 const app = express()
 const todoroute = require("./route/todoroute")
+const cors = require("cors")
+
 
 connectDatabase();
-
+app.use(cors)
 app.use(express.json())
 
 app.use("/api/todo",todoroute)
