@@ -77,23 +77,29 @@ function Todo() {
         />
         <button onClick={addTask}>Add</button>
       </div>
-      <ul>
+      <ul >
         {tasks.map((task) => (
           <li key={task._id}>
             {task._id === editTask.id ? (
-              <div>
+              <div className='holder'>
                 <input
                   type="text"
                   value={editTask.text}
                   onChange={(e) => setEditTask({ ...editTask, text: e.target.value })}
                 />
+                <div className='button-container'>
                 <button onClick={updateTask}>Update</button>
+                </div>
+
               </div>
             ) : (
-              <div>
+              <div className='holder'>
                 {task.todo}
+                <div className='button-container'>
+
                 <button onClick={() => removeTask(task._id)}>Remove</button>
                 <button onClick={() => setEditTask({ id: task._id, text: task.todo })}>Edit</button>
+                </div>
               </div>
             )}
           </li>

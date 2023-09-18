@@ -23,11 +23,11 @@ h1 {
 }
 
 /* Input Container Styles */
-.input-container {
+/* .input-container {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
-}
+} */
 
 input[type="text"] {
   flex: 1;
@@ -35,6 +35,7 @@ input[type="text"] {
   border: 2px solid #ccc;
   border-radius: 4px;
   font-size: 16px;
+  width: 60%;
 }
 
 /* Button styles with hover effect */
@@ -60,16 +61,18 @@ button:hover {
 ul {
   list-style-type: none;
   padding: 0;
-}
+  width: 80%;
+  margin: auto;
+  margin-top: 60px;
 
+}
 
 li {
   background-color: #fff;
   border: 1px solid #ccc;
+  width: 100%;
   margin: 10px 0;
   padding: 10px;
-  display: flex;
-  justify-content: space-between;
   align-items: center;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -77,6 +80,7 @@ li {
 
 li {
   margin-right: 10px; /* or padding-right: 10px; */
+  width: 100%;
 }
 
 /* Hover Effect */
@@ -107,14 +111,31 @@ li:hover {
     flex-direction: column;
     align-items: flex-start;
   }
-
+  
   input[type="text"] {
-    width: 100%;
+    width: 80%;
     margin-bottom: 10px;
   }
 
   button {
-    width: 100%;
+    width: 45%;
     margin-left: 0;
   }
+  .holder{
+    flex-direction: column;
+
+ 
+  }
+
+  
+  .button-container{
+    justify-content: space-around;
+    display: flex;
+    margin-top: 20px;
+  }
+}
+
+.holder{
+  display: flex;
+  justify-content: space-between;
 }
