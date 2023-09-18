@@ -56,7 +56,7 @@ function Todo() {
   const removeTask = async (taskId) => {
     console.log("Deleting task with ID:", taskId);
     try {
-      await axios.delete(`http://localhost:4000/api/todo/delete/${taskId}`);
+      await axios.delete(`https://to-do-application-2esl.onrender.com/api/todo/delete/${taskId}`);
       const updatedTasks = tasks.filter((task) => task._id !== taskId);
       setTasks(updatedTasks);
     } catch (err) {
