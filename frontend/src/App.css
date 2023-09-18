@@ -1,0 +1,120 @@
+/* Todo.css */
+
+/* Global Styles */
+/* Todo.css */
+
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+ 
+  background-size: cover; /* Make the background cover the entire viewport */
+  background-repeat: no-repeat; /* Prevent background image from repeating */
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Input Container Styles */
+.input-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Button styles with hover effect */
+button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 10px;
+  transition: background-color 0.3s, color 0.3s; /* Add transitions */
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: #555; /* Change the background color on hover */
+  color: #fff; /* Change the text color on hover */
+}
+
+/* Task List Styles */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+
+li {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  margin: 10px 0;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+li {
+  margin-right: 10px; /* or padding-right: 10px; */
+}
+
+/* Hover Effect */
+li:hover {
+  background-color: #f0f0f0;
+  transition: background-color 0.3s;
+}
+
+/* Remove Button Styles */
+.remove-button {
+  background-color: #ff6347;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.remove-button:hover {
+  background-color: #e24719;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  /* Adjust styles for smaller screens here */
+  .input-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  button {
+    width: 100%;
+    margin-left: 0;
+  }
+}
