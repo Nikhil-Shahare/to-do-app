@@ -66,9 +66,8 @@ router.put("/update", async (req, res) => {
       });
     }
   });
-
-  router.delete("/delete", async (req, res) => {
-    const { _id } = req.body;
+  router.delete("/delete/:_id", async (req, res) => {
+    const { _id } = req.params; // Get the _id from URL params
     try {
         const deletedTodo = await TODO.findByIdAndDelete(_id);
         if (!deletedTodo) {
@@ -89,6 +88,7 @@ router.put("/update", async (req, res) => {
         });
     }
 });
+
 
 
 module.exports = router
